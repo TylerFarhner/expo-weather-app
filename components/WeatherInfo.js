@@ -1,5 +1,8 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image } from 'react-native'
+import { colors } from '../utils/index'
+
+const { PRIMARY_COLOR, SECONDARY_COLOR } = colors
 
 export default function WeatherInfo({ currentWeather }) {
 
@@ -18,7 +21,7 @@ export default function WeatherInfo({ currentWeather }) {
             <Text>{name}</Text>
             <Image style={ styles.weatherIcon } source={{ uri: iconUrl }} />
             <Text>{temp}</Text>
-            <Text>{description}</Text>
+            <Text style={ styles.weatherDescription }>{description}</Text>
             <Text>{main}</Text>
         </View>
     )
@@ -29,9 +32,14 @@ const styles = StyleSheet.create ({
     WeatherInfo: {
         alignItems: 'center'
     },
+    
+    weatherDescription: {
+        textTransform: 'capitalize'
+    },
 
     weatherIcon: {
         width: 100,
         height: 100
-    }
+    },
+
 })

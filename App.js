@@ -55,7 +55,6 @@ export default function App() {
   }
 
   if(currentWeather) {
-    const { main : {temp} } = currentWeather
     
     return (
   

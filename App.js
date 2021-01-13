@@ -47,7 +47,9 @@ export default function App() {
       }
 
       // alert(`Latitiude : ${latitude}, Longitude : ${longitude}`)
-    } catch (error){}
+    } catch (error){
+      setErrorMessage(error.message)
+    }
   }
 
   if(currentWeather) {
@@ -78,7 +80,6 @@ export default function App() {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: 'red',
       alignItems: 'center',
       justifyContent: 'center',
     },

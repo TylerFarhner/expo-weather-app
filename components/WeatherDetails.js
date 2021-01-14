@@ -8,7 +8,8 @@ const { PRIMARY_COLOR, SECONDARY_COLOR, BORDER_COLOR } = colors
 export default function WeatherDetails({ currentWeather }) {
 
     const {
-        main: { feels_like, humidity }
+        main: { feels_like, humidity, pressure },
+        wind: { speed }
     } = currentWeather
 
     return (

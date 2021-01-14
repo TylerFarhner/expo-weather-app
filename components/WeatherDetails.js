@@ -24,7 +24,15 @@ export default function WeatherDetails({ currentWeather }) {
                     </View>
                 </View>
                 <View style={ styles.weatherDetailsBox }>
-                    <Text>{ humidity }</Text>
+                    <View style={ {...styles.weatherDetailsBox, borderRightWidth: 1, borderRightColor: BORDER_COLOR} }>
+                        <View style={ styles.weatherDetailsRow }>
+                            <MaterialCommunityIcons name="water" size={ 30 } color={ PRIMARY_COLOR } />
+                            <View style={ styles.weatherDetailsItems } >
+                                <Text>Humidity:</Text>
+                                <Text style={ styles.textSecondary }>{ humidity }</Text>
+                            </View>
+                        </View>
+                    </View>
                 </View>
             </View>
         </View>

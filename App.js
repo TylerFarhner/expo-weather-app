@@ -70,7 +70,7 @@ export default function App() {
         <StatusBar style="auto" />
         <View style={styles.main}>
           <UnitsPicker unitSystem={unitSystem} setUnitSystem={setUnitSystem} />
-          <ReloadIcon />
+          <ReloadIcon load={load}/>
           <WeatherInfo currentWeather={currentWeather} />
         </View>
       </View>

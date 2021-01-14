@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
 import * as Location from 'expo-location';
 import WeatherInfo from './components/WeatherInfo';
 import UnitsPicker from "./components/UnitsPicker";
@@ -72,7 +72,7 @@ export default function App() {
       </View>
       
     )
-} else {
+} else if (errorMessage) {
 
     // --------- ERROR VIEW ------------
     return (
@@ -82,7 +82,16 @@ export default function App() {
       </View>
     )
 
-    }
+} else {
+
+  return (
+    <View style={styles.container}>
+      <ActivityIndicator />
+      <StatusBar style="auto" />
+    </View>
+  )
+
+}
 }
 
 

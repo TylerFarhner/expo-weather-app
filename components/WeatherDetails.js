@@ -18,21 +18,23 @@ export default function WeatherDetails({ currentWeather, unitSystem }) {
         <View style={ styles.weatherDetails }>
             <View style={ styles.weatherDetailsRow }>
                 <View style={ {...styles.weatherDetailsBox, borderRightWidth: 1, borderRightColor: BORDER_COLOR} }>
+                    {/* ----------------- FEELS LIKE ITEM ----------------------- */}
                     <View style={ styles.weatherDetailsRow }>
                         <FontAwesome5 name="temperature-low" size={ 25 } color={ PRIMARY_COLOR } />
                         <View style={ styles.weatherDetailsItems } >
                             <Text>Feels like:</Text>
-                            <Text style={ styles.textSecondary }>{ feels_like }</Text>
+                            <Text style={ styles.textSecondary }>{ feels_like } °</Text>
                         </View>
                     </View>
                 </View>
                 <View style={ styles.weatherDetailsBox }>
                     <View style={ {...styles.weatherDetailsBox, borderRightWidth: 1, borderRightColor: BORDER_COLOR} }>
+                        {/* ----------------- HUMIDITY ITEM ----------------------- */}
                         <View style={ styles.weatherDetailsRow }>
                             <MaterialCommunityIcons name="water" size={ 30 } color={ PRIMARY_COLOR } />
                             <View style={ styles.weatherDetailsItems } >
                                 <Text>Humidity:</Text>
-                                <Text style={ styles.textSecondary }>{ humidity }</Text>
+                                <Text style={ styles.textSecondary }>{ humidity } %</Text>
                             </View>
                         </View>
                     </View>
@@ -40,21 +42,23 @@ export default function WeatherDetails({ currentWeather, unitSystem }) {
             </View>
             <View style={ styles.weatherDetailsRow }>
                 <View style={ {...styles.weatherDetailsBox, borderRightWidth: 1, borderRightColor: BORDER_COLOR} }>
+                    {/* ----------------- WINDSPEED ITEM ----------------------- */}
                     <View style={ styles.weatherDetailsRow }>
-                        <FontAwesome5 name="temperature-low" size={ 25 } color={ PRIMARY_COLOR } />
+                        <MaterialCommunityIcons name="weather-windy" size={ 30 } color={ PRIMARY_COLOR } />
                         <View style={ styles.weatherDetailsItems } >
-                            <Text>Feels like:</Text>
-                            <Text style={ styles.textSecondary }>{ feels_like }</Text>
+                            <Text>Windspeed:</Text>
+                            <Text style={ styles.textSecondary }>{ windSpeed }</Text>
                         </View>
                     </View>
                 </View>
                 <View style={ styles.weatherDetailsBox }>
                     <View style={ {...styles.weatherDetailsBox, borderRightWidth: 1, borderRightColor: BORDER_COLOR} }>
+                        {/* ----------------- PRESSURE ITEM ----------------------- */}
                         <View style={ styles.weatherDetailsRow }>
-                            <MaterialCommunityIcons name="water" size={ 30 } color={ PRIMARY_COLOR } />
+                            <MaterialCommunityIcons name="speedometer" size={ 30 } color={ PRIMARY_COLOR } />
                             <View style={ styles.weatherDetailsItems } >
-                                <Text>Humidity:</Text>
-                                <Text style={ styles.textSecondary }>{ humidity }</Text>
+                                <Text>Pressure:</Text>
+                                <Text style={ styles.textSecondary }>{ pressure } hPa</Text>
                             </View>
                         </View>
                     </View>

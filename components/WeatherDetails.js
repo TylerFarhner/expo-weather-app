@@ -40,7 +40,7 @@ export default function WeatherDetails({ currentWeather, unitSystem }) {
                     </View>
                 </View>
             </View>
-            <View style={ styles.weatherDetailsRow }>
+            <View style={{ ...styles.weatherDetailsRow, borderTopWidth: 1, borderTopColor: BORDER_COLOR }}>
                 <View style={ {...styles.weatherDetailsBox, borderRightWidth: 1, borderRightColor: BORDER_COLOR} }>
                     {/* ----------------- WINDSPEED ITEM ----------------------- */}
                     <View style={ styles.weatherDetailsRow }>

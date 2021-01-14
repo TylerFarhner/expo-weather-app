@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
 import * as Location from 'expo-location';
 import WeatherInfo from './components/WeatherInfo';
 import UnitsPicker from "./components/UnitsPicker";
+import { colors } from './utils/index'
 
 const WEATHER_API_KEY = '1a08ff8281fd0ef09ac0112c2ddf0f57'
 const BASE_WEATHER_URL = 'https://api.openweathermap.org/data/2.5/weather?'
@@ -21,6 +22,7 @@ export default function App() {
   async function load() {
 
     setCurrentWeather(null)
+    setErrorMessage(null)
 
     try{ 
       let { status } = await Location.requestPermissionsAsync()
@@ -86,7 +88,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <ActivityIndicator />
+      <ActivityIndicator size="large" color={ colors.PRIMARY_COLOR } />
       <StatusBar style="auto" />
     </View>
   )

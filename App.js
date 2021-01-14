@@ -75,7 +75,7 @@ export default function App() {
           <WeatherInfo currentWeather={currentWeather} />
         </View>
 
-        <WeatherDetails />
+        <WeatherDetails currentWeather={currentWeather} />
 
       </View>
       
